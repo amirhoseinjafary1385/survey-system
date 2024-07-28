@@ -9,18 +9,24 @@
 
 
 
-
-
 php "manage.php":
+
+
+
 DB_NAme:"YOur Own Database Name ";
 IN the panel of your phpmyadmin taskbar>Sql:
+
+
 CREATE TABLE survey_responses (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100),
     email VARCHAR(100),
     feedback TEXT
 );
-type this command , and click "Go" Button:
+
+
+
+Type this command , and click "Go" Button:
 
 
 
