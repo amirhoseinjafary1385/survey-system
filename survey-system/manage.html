@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سیستم نظر سنجی  بر خط آنلاین</title>
+    <link rel="stylesheet" href="manage.css"></link>
+     <!-- اضافه کردن لینک Boxicons برای استفاده از آیکون‌ها -->
+     <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css'>
+     <style>
+        body {
+
+            /* انیمیشن برای رنگ پس‌زمینه و متن */
+            transition: background-color 0.3s ease-in, color 0.8s ease ;
+        }
+
+          /* استایل برای تم تاریک */
+
+          body.dark-theme {
+            background-color: #121212;
+            color: black;
+          }
+
+        .image {
+            text-align: center;
+        }
+     </style>
+</head>
+<body>
+    <div id="theme-toggle">
+        <box-icon id="dark-mode-icon" name='moon' type="solid" animation='tada' flip='horizontal'></box-icon><!-- Moon -->
+        <box-icon id="light-mode-icon" name='sun'  animation='tada' flip='horizontal' ></box-icon>      
+    </div>
+<div class="image">
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/023/220/595/small/3d-robot-illustration-kawaii-friendly-suitable-for-tech-mascot-free-png.png" alt="Bot1"> 
+    <img src="https://static.vecteezy.com/system/resources/thumbnails/022/144/686/small_2x/3d-illustration-of-robot-png.png" alt="Bot2">
+</div>
+    <div class="container" dir="rtl">
+        <h1 style=" color: gray;" class="nazar">*نظرسنجی ما*</h1>
+        
+        <form id="survey-form" action="manage.php" method="POST">
+            <label style="font-size: 20px;" for="name">نام, نام خانوادگی  شما:</label>
+            <input type="text" id="name" name="name" required>
+        
+            <label style="font-size: 20px;" for="email">ایمیل شما:</label>
+            <input type="email" id="email" name="email" required>
+        
+            <label style="font-size: 20px;"  for="feedback">نظر شما:</label>
+            <textarea id="feedback" name="feedback" required></textarea>
+            <h5 style="font-size: 20px;">ماشین انتخابی شما:</h5>
+            <div>
+                <input style="margin: 5px;"  type="checkbox" id="bmw" name="cars[]" value="Ferrari">
+                <label for="ferrari">*Ferrari*</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="bughatti" name="cars[]" value="Bugatti">
+                <label for="bugatti">*Bugatti*</label>
+            </div>
+            
+            
+            <div>
+                <input type="checkbox" id="pride" name="cars[]" value="Pride">
+                <label for="pride">*Pride*</label>
+            </div>
+
+            <div>
+                <input type="checkbox" id="batmobil" name="cars[]" value="Batmobil">
+                <label for="batmobil">*Batmobil*</label>
+            </div>
+        
+            
+            <div>
+                <input type="checkbox" id="mazda" name="cars[]" value="Mazda">
+                <label for="mazda">*MAzda*</label>
+            </div>
+
+
+            <button style="border-radius: 28px; background-color: green;" type="submit">ارسال</button>
+        </form>
+        
+    </div>
+
+
+
+     <script src='https://unpkg.com/boxicons@latest/dist/boxicons.js'></script>
+
+     <!-- بارگذاری فایل جاوااسکریپت -->
+      <script src="themeToggle.js"></script>
+</body>
+</html>
